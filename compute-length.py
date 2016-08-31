@@ -11,7 +11,11 @@ def lengthOfStrOrList(input):
     for x in input:
         count = count + 1
     return count
-
+"""
+Define counting variable inside a function
+since it is counting inside a iterative loop,
+which is further inside a function.
+"""
 
 
 def main():
