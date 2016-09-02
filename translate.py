@@ -1,24 +1,26 @@
 #!/usr/bin/env python
 
+"""Write a function translate that
 
+double every consonant and place an occurrence of "o" in between.
 
+For example, translate("this is fun") should return the string "tothohisos isos fofunon".
+"""
 def translate(s):
-    vowel = ["a","e","i","o","u"]
-    index = 0
-    for x in range(len(s) ):
-        letter = s[index]
-        if s in vowel:
-            continue
-        elif s not in vowel:
-           a=s[x]+ s.join("o")+s[x]
-        index = index + 1                
-    return a
-        
-
+    vowel = ["a","e","i","o","u"," "]
+    s_n = ""
+    for x in s:
+        if x not in vowel:
+            s_n = s_n +  x + 'o' + x
+        elif x in vowel:
+            s_n = s_n + x
+    return s_n
 
 def main():
-    v = translate("This is fun")
+    v = translate("this is fun")
     print v
+
 
 if __name__ == "__main__":
     main()
+
