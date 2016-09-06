@@ -4,13 +4,17 @@ Define a function overlapping() that takes two lists and returns True if they ha
 """
 
 def overlapping(l1,l2):
-  l1.sort()
-  l2.sort()
-  for i in range (0,len(l1)-1):
-    for j in range (0,len(l2)-1):
-      if l1[i]==l2[j]:
-        return True
-        
+    i =  len(l1)-1
+    j =  len(l2)-1
+    while (i>=0):
+        while (j>=0):
+            if l1[i]==l2[j]:
+                return True
+            if l1[i]!=l2[j]:
+                j = j - 1
+        i = i-1
+    return False
+
 
 def main():
     v=overlapping([1],[2,1,3])
