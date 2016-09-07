@@ -11,7 +11,7 @@ Define a procedure histogram() that takes a list of integers and prints a histog
 from generateCharacters import *
 
 def histogram(l):
-    c = 'x'		
+    c = '*'		
     for n in l:
       v = generate_n_chars(n,c)
       print v
