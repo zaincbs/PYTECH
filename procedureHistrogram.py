@@ -12,14 +12,13 @@ from generateCharacters import *
 
 def histogram(l):
     c ='x'
-    for i in range(0,len(l)-1):
-        for j in l[i]:
-            n = l[i]
-            v = generate_n_chars(n,c)
-        return v
+    b = len(l)-1
+    for j in l:
+        v = generate_n_chars(j,c)
+    return v
 
 def main():
-    k = histogram([4])
+    k = histogram([4,9,7])
     print k
 
 if __name__ == "__main__":
