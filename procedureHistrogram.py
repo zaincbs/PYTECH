@@ -10,11 +10,13 @@ Define a procedure histogram() that takes a list of integers and prints a histog
 
 from generateCharacters import *
 
-def histogram(n):
+def histogram(l):
     c ='x'
-    for i in n:
-        v = generate_n_chars(n,c)
-    return v
+    for i in range(0,len(l)-1):
+        for j in l[i]:
+            n = l[i]
+            v = generate_n_chars(n,c)
+        return v
 
 def main():
     k = histogram([4])
