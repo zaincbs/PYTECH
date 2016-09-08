@@ -8,13 +8,13 @@ import sys
 def cat(fileName,mod):
 	fileObj = open(fileName,mod)
 	v =fileObj.read()	
-	print v
+	return v
 	fileObj.close()
-
 
 def main():
 	argList =sys.argv
-	cat(argList[1],argList[2])
+	p=cat(argList[1],argList[2])
+	print p
 
 if __name__ == "__main__":
 	main()
