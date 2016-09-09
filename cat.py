@@ -12,9 +12,11 @@ def cat(fileName,mod):
 	fileObj.close()
 
 def main():
-	argList =sys.argv
-	p=cat(argList[1],argList[2])
-	print p
+    argList =sys.argv
+    fileName=argList[1]
+    mod= argList[2]
+    p=cat(fileName,mod)
+    print p
 
 if __name__ == "__main__":
 	main()
