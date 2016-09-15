@@ -11,7 +11,8 @@ def cpFunction(filename,filename1):
     v=fileObj.read()
     fileObj1=open(filename1,'w')
     fileObj1.write(v)
-
+    fileObj.close()
+    fileObj1.close()
 def main():
     argList= sys.argv
     filename = argList[1]
