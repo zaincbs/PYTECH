@@ -7,27 +7,73 @@ Write a version of a palindrome recognizer that also accepts phrase palindromes 
 from reverseOfString import reverse
 
 def palindrome_recognizer(s):
-    punctuation = ' 0123456789!"#$%&\'()*+,-./:;?@[\\]^_`{|}~ \t\n\r\x0b\x0c'
     for i in s:    
-        if i in punctuation:
-            a = s.replace(i, "")
-    v=a.lower()        
+        if i == ',': 
+            s = s.replace(i, "")
+        if i == " ":
+            s = s.replace(i, "")
+        if i == "'":
+            s = s.replace(i, "")
+        if i == "?":
+            s = s.replace(i, "")
+        if i == ".":
+            s = s.replace(i, "")
+        if i == '!': 
+            s = s.replace(i, "")
+    v=s.lower()    
     print v
-    v1 =len(v)/2
-    if v[v1:len(v)] == reverse(v[0:v1]):
+    if v == reverse(v):
         return s," is a palindrome phrase"
     else:
         return s," is not a palindrome phrase" 
 
 def main():
-    b = palindrome_recognizer("Step on no pets")
+    b =palindrome_recognizer("Step on no pets")
     print b
+    c =palindrome_recognizer("Go hang a salami I'm a lasagna hog.")
+    print c
+    d =palindrome_recognizer("Was it a rat I saw?")
+    print d
+    e =palindrome_recognizer("Step on no pets")
+    print e
+    f =palindrome_recognizer("Sit on a potato pan, Otis")
+    print f
+    g =palindrome_recognizer("Lisa Bonet ate no basil")
+    print g
+    h =palindrome_recognizer("Satan, oscillate my metallic sonatas")
+    print h
+    i=palindrome_recognizer("I roamed under it as a tired nude Maori")
+    print i
+    j=palindrome_recognizer("Rise to vote sir")
+    print j
+    k= palindrome_recognizer("Dammit, I'm mad!")
+    print k
 
 if __name__ == "__main__":
     main()
 
 """
-./palindrome_recog.py 
+$ ./palindrome_recog.py 
 steponnopets
-('Step on no pets', ' is a palindrome phrase')
+('Steponnopets', ' is a palindrome phrase')
+gohangasalamiimalasagnahog
+('GohangasalamiImalasagnahog', ' is a palindrome phrase')
+wasitaratisaw
+('WasitaratIsaw', ' is a palindrome phrase')
+steponnopets
+('Steponnopets', ' is a palindrome phrase')
+sitonapotatopanotis
+('SitonapotatopanOtis', ' is a palindrome phrase')
+lisabonetatenobasil
+('LisaBonetatenobasil', ' is a palindrome phrase')
+satanoscillatemymetallicsonatas
+('Satanoscillatemymetallicsonatas', ' is a palindrome phrase')
+iroamedunderitasatirednudemaori
+('IroamedunderitasatirednudeMaori', ' is a palindrome phrase')
+risetovotesir
+('Risetovotesir', ' is a palindrome phrase')
+dammitimmad
+('DammitImmad', ' is a palindrome phrase')
+
+
 """
