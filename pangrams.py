@@ -14,23 +14,23 @@ to see if it is a pangram or not
 
 
 def pangram(s):
-    a = ''
+    a = s
     letters = 'abcdefghijklmnopqrstuvwxyz'
 
     #removing characters from a string
     for i in s:    
         if i == ',': 
-            a = s.replace(i, "")
+            a = a.replace(i, "")
         if i == " ":
-            a = s.replace(i, "")
+            a = a.replace(i, "")
         if i == "'":
-            a = s.replace(i, "")
+            a = a.replace(i, "")
         if i == "?":
-            a = s.replace(i, "")
+            a = a.replace(i, "")
         if i == ".":
-            a = s.replace(i, "")
+            a = a.replace(i, "")
         if i == '!': 
-            a = s.replace(i, "")
+            a = a.replace(i, "")
             
     #sorting string alphabetic order and in lowercase
     newstring = ''.join(sorted(a)).lower() 
@@ -65,9 +65,9 @@ if __name__ == "__main__":
         
 """
 $ ./pangrams.py 
-('Thequickbrownfoxjumpsoverthelazydog', ' is a pangram')
-('Packmyboxwithfivedozenliquorjugs', ' is a pangram')
-('Jackdawslovemybigsphinxofquartz', ' is a pangram')
-('Thefiveboxingwizardsjumpquickly', ' is a pangram')
-('Howvexinglyquickdaftzebrasjump', ' is a pangram')
+('The quick brown fox jumps over the lazy dog.', ' is a pangram')
+('Pack my box with five dozen liquor jugs.', ' is a pangram')
+('Jackdaws love my big sphinx of quartz.', ' is a pangram')
+('The five boxing wizards jump quickly.', ' is a pangram')
+('How vexingly quick daft zebras jump!', ' is a pangram')
 """
