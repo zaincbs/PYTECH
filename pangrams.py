@@ -14,25 +14,26 @@ to see if it is a pangram or not
 
 
 def pangram(s):
+    a = ''
     letters = 'abcdefghijklmnopqrstuvwxyz'
 
     #removing characters from a string
     for i in s:    
         if i == ',': 
-            s = s.replace(i, "")
+            a = s.replace(i, "")
         if i == " ":
-            s = s.replace(i, "")
+            a = s.replace(i, "")
         if i == "'":
-            s = s.replace(i, "")
+            a = s.replace(i, "")
         if i == "?":
-            s = s.replace(i, "")
+            a = s.replace(i, "")
         if i == ".":
-            s = s.replace(i, "")
+            a = s.replace(i, "")
         if i == '!': 
-            s = s.replace(i, "")
+            a = s.replace(i, "")
             
     #sorting string alphabetic order and in lowercase
-    newstring = ''.join(sorted(s)).lower() 
+    newstring = ''.join(sorted(a)).lower() 
     sorting_newstring = ''.join(sorted(newstring))
     #print sorting_newstring
 
