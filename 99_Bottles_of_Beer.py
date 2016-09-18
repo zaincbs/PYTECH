@@ -24,8 +24,7 @@ def bottles_decrementor(n):
     for i in range(n,1,-1):
         bottles = bottles - 1
         bottle = bottle - 1 
-        print bottles , "bottles of beer on the wall, ", bottles, "bottles of beer." 
-        print "Take one down, pass it around, " , bottle, " bottles of beer on the wall." 
+        print bottles , "bottles of beer on the wall, ", bottles, "bottles of beer.\nTake one down, pass it around, " , bottle, " bottles of beer on the wall." 
 
 def main():
     v= bottles_decrementor(100)
