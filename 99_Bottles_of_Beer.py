@@ -18,7 +18,6 @@ all the verses of the song.
 """
 
 def bottles_decrementor(n):
-    new_lyrics =""
     bottles = n 
     bottle = n-1
     for i in range(n,1,-1):
