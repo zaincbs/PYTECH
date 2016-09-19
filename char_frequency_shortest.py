@@ -9,7 +9,7 @@ Try it with something like char_freq("abbabcbdbabdbdbabababcbcbab").
 import string
 
 def char_freq(s):
-    for letters in lowercase_elements_in_ascii:
+    for letters in string.ascii_lowercase:
         print '{'"'",letters,"':'", s.count(letters),"'",'}',
   
 def main():
