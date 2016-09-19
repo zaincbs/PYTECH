@@ -9,12 +9,6 @@ Try it with something like char_freq("abbabcbdbabdbdbabababcbcbab").
 import string
 
 def char_freq(s):
-    newsorted_string= ''.join(sorted(s))
-    #print newsorted_string
-        
-    #creating an ascii list of lowercase
-    #alphabets
-    lowercase_elements_in_ascii =string.ascii_lowercase
     for letters in lowercase_elements_in_ascii:
         print '{'"'",letters,"':'", s.count(letters),"'",'}',
   
