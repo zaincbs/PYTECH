@@ -23,7 +23,7 @@ if __name__ == "__main__":
     main()
 
 """
-$ ./cpFuntion.py Samadcp.txt Samad.txt 
+$ ./cpFuntion.py Samad.txt Samadcp.txt 
 
 $cat Samad.txt 
 I am Abdul Samad
