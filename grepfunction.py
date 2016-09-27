@@ -5,8 +5,6 @@ in a file
 
 
 """
-import sys 
-import string
 
 def grepfunction(filename, searchstr):
     f= open(filename,'r')
