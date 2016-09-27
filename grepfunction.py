@@ -5,13 +5,16 @@ in a file
 
 
 """
-
+import sys
 def grepfunction(filename, searchstr):
     f= open(filename,'r')
     for lines in f:
         #print lines
 	if searchstr in lines:
-          print lines
+         # print lines
+	   print"\033[44;33m%s\033[m"% (searchstr), lines
+	#\033[44;33m%s\033[m  highlights theword in the line
+
 def main():
     argList= sys.argv
     filename_to_be_read = argList[1]
