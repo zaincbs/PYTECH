@@ -13,8 +13,9 @@ def grepfunction(filename, searchstr):
 	if searchstr in lines:
          # print lines
 	   print"\033[44;33m%s\033[m"% (searchstr), lines
-	#\033[44;33m%s\033[m  highlights theword in the line
 
+	#\033[44;33m%s\033[m  highlights theword in the line
+	#ref: http://stackoverflow.com/questions/35731194/how-to-highlight-a-word-found-in-a-text-file
 def main():
     argList= sys.argv
     filename_to_be_read = argList[1]
