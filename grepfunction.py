@@ -11,8 +11,9 @@ def grepfunction(filename, searchstr):
     for lines in f:
         #print lines
 	if searchstr in lines:
-         # print lines
-	   print"\033[44;33m%s\033[m"% (searchstr), lines
+           #print lines
+	   #print"\033[44;33m%s\033[m"% (searchstr), lines
+	   print lines.replace(searchstr,"\033[44;33m%s\033[m"% (searchstr))	
 
 	#\033[44;33m%s\033[m  highlights theword in the line
 	#ref: http://stackoverflow.com/questions/35731194/how-to-highlight-a-word-found-in-a-text-file
@@ -30,6 +31,8 @@ $ cat Samadnew.txt
 I am Abdul Samad.
 I happen to live in California
 
+I happen to live in California
+
 I work at TVU Networks                 
 -------
 $ ./grepfunction.py Samadnew.txt "in California"
@@ -41,6 +44,8 @@ I am Abdul Samad.
 $ ./grepfunction.py Samadnew.txt Networks
 I work at TVU Networks              
 
-$ ./grepfunction.py Samadnew.txt California
-I happen to live in California    
+$ ./grepfunction.py Samadnew.txt "in California"
+I happen to live in California
+
+I happen to live in California                                      
 """
