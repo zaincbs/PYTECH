@@ -12,20 +12,38 @@ def readFile(filename):
     opposed = ''
     finale= ''
 
+    inline = '' 
     #reading file line by line
-    with open(filename) as f:
-	lines = f.readlines()
+    #with open(filename) as f:
+	 #   lines = f.readlines()
     #print lines 
+    f = open(filename,'r')
+    lines = f.readlines()
+    print lines
+    print('')
+    print ('1')
 
+    for i in range(0,1,len(f.readlines())-1):
+        inline = inline + lines[i]
+    print inline
+    print ('')
+    print ('2')
     #printing file in reverse order
     for rev in range(len(lines)-1,-1,-1):
-	rorder = rorder + lines[rev]
-    #print rorder
+    	rorder = rorder + lines[rev]
+    print rorder
+    #print '.'.join(reversed(rorder.split('.')))
+    print ('3')
 
     #printing words in reverse order
     for words_rorder in range(len(rorder)-1,-1,-1):
         finale = finale + rorder[words_rorder]
     print finale
+    print ('4')
+    print('')
+        
+    print finale.rstrip()
+
 def main():
     argList= sys.argv
     filename_to_be_read = argList[1]
