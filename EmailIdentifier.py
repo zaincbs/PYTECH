@@ -1,8 +1,9 @@
 #!/usr/bin/python     
 
 """
-Creating an email identifier. It should check that email 
-email has a valid descrption
+Creating an email identifier. It should parse the email 
+via command line . Then it splits the email id into 3 tokens .
+If last token == 'com' email id is considered valid
 """
 import re
 import sys
