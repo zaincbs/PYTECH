@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
+PYTHON FILE READER
 
-file reader
 """
 import sys
 import shlex
