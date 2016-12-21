@@ -83,12 +83,14 @@ Please enter your ID/s:(enter comma separated IDs if more than one):6,7,8,9,10
 
 $ ./PythonFileReader-new.py examplefile.txt
 The number of invalid lines are 3
-Please enter your ID/s:(enter comma separated IDs if more than one):9,8,dvg
-9 Value2
+Please enter your ID/s:(enter comma separated IDs if more than one):7,8,9,sfsf,0,1
+7 The string we do care about.
 8 Value
 8 Value
 8 Value2
-dvg  'This ID is not a number. Invlalid Entry!'  
-
+9 Value2
+sfsf  'This ID is not a number. Please enter a valid number. Invalid Entry!'
+0 This ID does not exist !
+1 This ID does not exist !  
 """
 
