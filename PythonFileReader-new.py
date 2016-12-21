@@ -41,7 +41,7 @@ def FileReaderFromDir(file1):
 	try:
 	    val = int(i)
 	except:
-	    print i, " 'This ID is not a number. Invlalid Entry!'  "
+	    print i, " 'This ID is not a number. Please enter a valid number. Invalid Entry!'  "
 	    continue
         if int(i) not in mydict :
             print i,"This ID does not exist !"
