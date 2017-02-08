@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-PYTHON FILE READER
 
+file reader
 """
 import sys
 import shlex
@@ -38,7 +38,12 @@ def FileReaderFromDir(file1):
     #print IDs
 
     for i in IDs:
-        if int(i) not in mydict:
+	try:
+	    val = int(i)
+	except:
+	    print i, " 'This ID is not a number. Invlalid Entry!'  "
+	    continue
+        if int(i) not in mydict :
             print i,"This ID does not exist !"
         elif len(mydict[int(i)]) > 1:
             for x in mydict[int(i)]:
@@ -76,6 +81,14 @@ Please enter your ID/s:(enter comma separated IDs if more than one):6,7,8,9,10
 9 Value2
 10 This ID does not exist !
 
+$ ./PythonFileReader-new.py examplefile.txt
+The number of invalid lines are 3
+Please enter your ID/s:(enter comma separated IDs if more than one):9,8,dvg
+9 Value2
+8 Value
+8 Value
+8 Value2
+dvg  'This ID is not a number. Invlalid Entry!'  
 
 """
 
