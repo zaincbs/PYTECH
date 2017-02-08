@@ -1,8 +1,49 @@
 #!/usr/bin/env python
+<<<<<<< HEAD
 """
+=======
+# -*- coding: latin-1 -*-
+>>>>>>> 5e5f8460f0c78330ddc8a9bbabe24372e91a61b3
 
 file reader
 """
+Python File Reader
+Read in a file of the form:
+ID date-time string1 string2 string3
+ID is a positive integer, date-time is a string without spaces, and the other three
+strings may or may not have spaces. But if they do have spaces, they will have
+double quotes around them. Double quotes in a string can be escaped with a
+backslash. The fields are space separated (possibly with multiple spaces), and the
+records are terminated with a newline character. There may be duplicated records,
+in which case both should be stored. All five values must be present for a row to be
+valid.
+For example:
+7 2016-06-10-17:53:22 “A quoted string we don’t care about” “The string we do
+care about.” “Another string we don’t care about with escaped\” \” quotes. ”
+8 2016-06-10-17:53:22 Str1 Value Str3
+8 2016-06-10-17:53:22 Str1 Value Str3
+8 2016-06-10-17:53:22 Str1 Value2 Str3
+9 2016-06-10-17:53:22 Str1 Value2 Str3
+-1 2016-06-10-17:53:22 “This line is invalid” Str2 Str3
+10 2016-06-10 17:53:22 “Also invalid” Str2 Str3
+10 2016-06-10-17:53:22 “Also invalid” Str2
+We want to store the ID value and the string2 value in a local memory data
+structure, ideally with fast lookup and insert. Invalid rows should not be stored, but
+a count of the total number of invalid lines should be printed out after reading the
+whole file.
+Now, prompt the user on the command line (using input, raw_input or the
+equivalent) for a comma separated list of ids. For each id in that list, print out all of
+the id and string2 values from records that have that id. So, with the above example,
+an input of: 9,8 should yield:
+9 Value2
+8 Value
+8 Value
+8 Value2
+If an id has multiple records, they should be printed out in the order that they were
+encountered in the original file.
+Don’t use anything that is not in the standard libraries.
+"""
+
 import sys
 import shlex
 import collections 
@@ -41,7 +82,11 @@ def FileReaderFromDir(file1):
 	try:
 	    val = int(i)
 	except:
+<<<<<<< HEAD
 	    print i, " 'This ID is not a number. Invlalid Entry!'  "
+=======
+	    print i, " 'This ID is not a number. Please enter a valid number. Invalid Entry!'  "
+>>>>>>> 5e5f8460f0c78330ddc8a9bbabe24372e91a61b3
 	    continue
         if int(i) not in mydict :
             print i,"This ID does not exist !"
@@ -83,6 +128,7 @@ Please enter your ID/s:(enter comma separated IDs if more than one):6,7,8,9,10
 
 $ ./PythonFileReader-new.py examplefile.txt
 The number of invalid lines are 3
+<<<<<<< HEAD
 Please enter your ID/s:(enter comma separated IDs if more than one):9,8,dvg
 9 Value2
 8 Value
@@ -90,5 +136,16 @@ Please enter your ID/s:(enter comma separated IDs if more than one):9,8,dvg
 8 Value2
 dvg  'This ID is not a number. Invlalid Entry!'  
 
+=======
+Please enter your ID/s:(enter comma separated IDs if more than one):7,8,9,sfsf,0,1
+7 The string we do care about.
+8 Value
+8 Value
+8 Value2
+9 Value2
+sfsf  'This ID is not a number. Please enter a valid number. Invalid Entry!'
+0 This ID does not exist !
+1 This ID does not exist !  
+>>>>>>> 5e5f8460f0c78330ddc8a9bbabe24372e91a61b3
 """
 
