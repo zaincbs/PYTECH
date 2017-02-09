@@ -21,7 +21,7 @@ def palindrome_recognizer(s):
         if i == '!': 
             s = s.replace(i, "")
     v=s.lower()    
-    print v
+    #print v
     if v == reverse(v):
         return s," is a palindrome phrase"
     else:
