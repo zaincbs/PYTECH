@@ -20,12 +20,14 @@ def palindrome_recognizer(s):
             s = s.replace(i, "")
         if i == '!': 
             s = s.replace(i, "")
-    v=s.lower()    
+    v=s.lower()   
     print v
-    if v == reverse(v):
-        return s," is a palindrome phrase"
-    else:
-        return s," is not a palindrome phrase" 
+    #if v == reverse(v):
+    for i in range(0, len(s)-1):
+        if v[i] == s[len(v)-1-i]:
+            return v," is a palindrome phrase"
+        else:
+            return v," is not a palindrome phrase" 
 
 def main():
     b =palindrome_recognizer("Step on no pets")
