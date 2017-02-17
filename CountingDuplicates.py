@@ -21,18 +21,20 @@ test.assert_equals(duplicate_count("indivisibility"), 1)
 import string
 def duplicate_count(text):
     # Your code goes here
+    count = 0	
     s= '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
     for x in s:
         if text.count(x)>1:
-            print x,x.count(x)
-	    
+           # print x, x.count(x)
+	   print x, x.count(x)
 
 
 def main():
-    v = duplicate_count('abcdea')
-    k=  duplicate_count('abcde')
-    m = duplicate_count('indivisibility')
-    #print v
+     v = duplicate_count('abcdea')
+     m = duplicate_count('indivisibility')
+     k=  duplicate_count('abcde')
+     l = duplicate_count('indivisibilities')
+     m = duplicate_count('aa11')
 
 
 if __name__ == "__main__":
