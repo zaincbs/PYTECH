@@ -26,7 +26,12 @@ def duplicate_count(text):
     for x in s:
         if text.count(x)>1:
            # print x, x.count(x)
-	   print x, x.count(x)
+	   count = count + 1
+
+    if count <= 1:	
+        print "The repeated alphabets/numbers in","'",text,"'","is: " , count
+    else:
+        print "The frequency of repeated  alphabets/numbers in","'",text,"'","are:" , count
 
 
 def main():
@@ -39,3 +44,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+$ ./CountingDuplicates.py
+The repeated alphabets/numbers in ' abcdea ' is:  1
+The repeated alphabets/numbers in ' indivisibility ' is:  1
+The repeated alphabets/numbers in ' abcde ' is:  0
+The frequency of repeated  alphabets/numbers in ' indivisibilities ' are: 2
+The frequency of repeated  alphabets/numbers in ' aa11 ' are: 2   
+
+
+"""
