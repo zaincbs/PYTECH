@@ -11,7 +11,6 @@ def reverseFile(filename):
     f = open(filename,'r')
     for line in f:
         line = line[::-1]
-        #list.append( line )
 	print line
     f.close()
 
